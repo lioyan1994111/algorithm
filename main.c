@@ -1,6 +1,6 @@
 #include <stdio.h>
-
+#include "test/Test.c"
 int main() {
-    printf("Hello, World!\n");
+    testInclude();
     return 0;
 }
