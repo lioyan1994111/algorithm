@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include "medium//Title1208.c"
+#include "medium//Title1423.c"
 
 
 int main() {
 
-    int a[5] = {0,4,0,3,2};
-    int avn = equalSubstring("abcd", "cdef", 1);
+    int a[7] = {1,2,3,4,5,6,1};
+    int avn = maxScore(a,7, 3);
     printf("%d",avn);
 
     return 0;
