@@ -1,6 +1,9 @@
 //
 // Created by 李延 on 2021/2/5.
 //
+#include <string.h>
+#include <stdlib.h>
+
 /*
  *
 给你两个长度相同的字符串，s 和 t。
@@ -39,6 +42,45 @@
  *
  *
  */
-int equalSubstring(char * s, char * t, int maxCost){
-    return 0;
+int equalSubstring(char *s, char *t, int maxCost) {
+
+    int n = strlen(s);
+    int sum[n];
+    for (int i = 0; i < n; i++) {
+        sum[i] = abs(s[i] - t[i]);
+    }
+    //上一次的长度
+    int lostLen = 0;
+    //最长情况
+    int maxLen = 0;
+
+    //上一步的最大开销
+    int lostMaxCost = 0;
+    //
+    for (int i = 0; i < n; i++) {
+        int num = sum[i];
+        int findCost = lostMaxCost + num;
+        lostLen += 1;
+
+        if (findCost > maxCost) {
+            for (int j = i - lostLen+1; j >= 0 && j <= i; j++) {
+                lostLen -= 1;
+                findCost = findCost - sum[j];
+                if (findCost <= maxCost) {
+                    lostMaxCost = findCost;
+                    break;
+                }
+
+            }
+        } else {
+            lostMaxCost = findCost;
+        }
+
+
+        if (lostLen > maxLen) {
+            maxLen = lostLen;
+        }
+
+    }
+    return maxLen;
 }

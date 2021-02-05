@@ -5,8 +5,8 @@
 int main() {
 
     int a[5] = {0,4,0,3,2};
-    double avn = equalSubstring(a, 5, 1);
-    printf("%f",avn);
+    int avn = equalSubstring("abcd", "cdef", 1);
+    printf("%d",avn);
 
     return 0;
 }
