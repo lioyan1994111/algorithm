@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include "medium//Title1423.c"
+#include "simple/Title665.c"
 
 
 int main() {
 
-    int a[7] = {1,2,3,4,5,6,1};
-    int avn = maxScore(a,7, 3);
+    int a[3] = {4,2,3};
+    bool avn = checkPossibility(a,3);
     printf("%d",avn);
 
     return 0;
