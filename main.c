@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include "simple/Title665.c"
+#include "difficult/Title992.c"
 
 
 int main() {
 
-    int a[3] = {4,2,3};
-    bool avn = checkPossibility(a,3);
+    int a[5] = {2,1,2,1,1};
+    int avn = subarraysWithKDistinct(a,5,3);
     printf("%d",avn);
 
     return 0;
