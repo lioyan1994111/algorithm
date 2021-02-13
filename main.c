@@ -1,11 +1,13 @@
 #include <stdio.h>
-#include "medium/Title567.c"
+#include "simple/Title448.c"
 
 
 int main() {
 
-    int a[5] = {2,1,2,1,1};
-    bool avn = checkInclusion2("trinitrophenylmethylnitramine",  "dinittrinitrophenylmethylnitramine");
+    int a[8] = {4,3,2,7,8,2,3,1};
+    int n ;
+    int *avn = findDisappearedNumbers(a,8,&n);
+
     printf("%d",avn);
 
     return 0;
