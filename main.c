@@ -1,12 +1,12 @@
 #include <stdio.h>
-#include "difficult/Title765.c"
+#include "difficult/Title995.c"
 
 
 int main() {
 
-    int a[4] = {3,2,0,1};
+    int a[8] = {0,0,0,1,0,1,1,0};
     int n ;
-    int avn = minSwapsCouples(a,4);
+    int avn = minKBitFlips(a,8,3);
 
     printf("%d",avn);
 
